@@ -1,0 +1,643 @@
+[
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AMEX_BlueMail_2024_3_7_21_51-242.png"
+        ],
+        "img_filename": "BlueMail_2024_3_7_21_51-242.png",
+        "bbox": [
+            868.5,
+            227.6,
+            963.0,
+            276.9
+        ],
+        "image_height": 3040,
+        "image_width": 1440,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Visual Notification",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Visual Notification by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off Visual Notification",
+        "negInstruction": "turn on Visual Notification",
+        "posAtlasAction": "CLICK <point>[[915.8, 252.2]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AndroidWorld_3f71c47d-87e2-4073-8aeb-4a8920939431.png"
+        ],
+        "img_filename": "3f71c47d-87e2-4073-8aeb-4a8920939431.png",
+        "bbox": [
+            857.7,
+            864.0,
+            908.1,
+            889.0
+        ],
+        "image_height": 2400,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Video play queue history",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Video play queue history by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off Video play queue history",
+        "negInstruction": "turn on Video play queue history",
+        "posAtlasAction": "CLICK <point>[[882.9, 876.5]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/RICOSCA_47814.jpg"
+        ],
+        "img_filename": "47814.jpg",
+        "bbox": [
+            883.3,
+            148.0,
+            961.1,
+            191.8
+        ],
+        "image_height": 1920,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Force enable zoom",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Force enable zoom by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Force enable zoom",
+        "negInstruction": "turn off Force enable zoom",
+        "posAtlasAction": "CLICK <point>[[922.2, 169.9]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/GUIAct_step_32.png"
+        ],
+        "img_filename": "step_32.png",
+        "bbox": [
+            198.5,
+            0.4,
+            254.6,
+            36.6
+        ],
+        "image_height": 732,
+        "image_width": 412,
+        "clickCoordinate": [
+            104.0,
+            55.0
+        ],
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "File Manager",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off File Manager by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off File Manager",
+        "negInstruction": "turn on File Manager",
+        "posAtlasAction": "CLICK <point>[[226.6, 18.5]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AMEX_BlueMail_2024_3_7_21_51-242.png"
+        ],
+        "img_filename": "BlueMail_2024_3_7_21_51-242.png",
+        "bbox": [
+            39.0,
+            138.0,
+            961.0,
+            212.0
+        ],
+        "image_height": 3040,
+        "image_width": 1440,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Notifications",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Notifications by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off Notifications",
+        "negInstruction": "turn on Notifications",
+        "posAtlasAction": "CLICK <point>[[500.0, 175.0]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/GUIAct_step_14.png"
+        ],
+        "img_filename": "step_14.png",
+        "bbox": [
+            8.2,
+            447.4,
+            948.0,
+            566.7
+        ],
+        "image_height": 1080,
+        "image_width": 540,
+        "clickCoordinate": [
+            911.0,
+            617.0
+        ],
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Time to leave",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Time to leave by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Time to leave",
+        "negInstruction": "turn off Time to leave",
+        "posAtlasAction": "CLICK <point>[[478.1, 507.1]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AITW_episode_18412223251426689556_step_5.jpg"
+        ],
+        "img_filename": "episode_18412223251426689556_step_5.jpg",
+        "bbox": [
+            612.5,
+            482.7,
+            712.5,
+            582.7
+        ],
+        "image_height": 732,
+        "image_width": 412,
+        "clickCoordinate": [
+            662.5,
+            532.7
+        ],
+        "useBbox": false,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Airplane mode",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Airplane mode by changing the switch from Disabled to Enabled"
+        },
+        "rawClickCoordinate": [
+            273,
+            390
+        ],
+        "posInstruction": "turn on Airplane mode",
+        "negInstruction": "turn off Airplane mode",
+        "posAtlasAction": "CLICK <point>[[662.5, 532.7]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/RICOSCA_47874.jpg"
+        ],
+        "img_filename": "47874.jpg",
+        "bbox": [
+            29.2,
+            194.5,
+            144.4,
+            231.6
+        ],
+        "image_height": 1920,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Following Only",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Following Only by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Following Only",
+        "negInstruction": "turn off Following Only",
+        "posAtlasAction": "CLICK <point>[[86.8, 213.1]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AMEX_Player_FM_2024_3_4_23_31-79.png"
+        ],
+        "img_filename": "Player_FM_2024_3_4_23_31-79.png",
+        "bbox": [
+            830.5,
+            663.8,
+            956.0,
+            697.4
+        ],
+        "image_height": 3040,
+        "image_width": 1440,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Show downloaded only",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Show downloaded only by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Show downloaded only",
+        "negInstruction": "turn off Show downloaded only",
+        "posAtlasAction": "CLICK <point>[[893.2, 680.6]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/RICOSCA_47886.jpg"
+        ],
+        "img_filename": "47886.jpg",
+        "bbox": [
+            883.3,
+            186.7,
+            961.1,
+            230.5
+        ],
+        "image_height": 1920,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Password Protection",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action enable Password Protection by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Password Protection",
+        "negInstruction": "turn off Password Protection",
+        "posAtlasAction": "CLICK <point>[[922.2, 208.6]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AndroidWorld_3f71c47d-87e2-4073-8aeb-4a8920939431.png"
+        ],
+        "img_filename": "3f71c47d-87e2-4073-8aeb-4a8920939431.png",
+        "bbox": [
+            858.5,
+            943.4,
+            909.2,
+            971.6
+        ],
+        "image_height": 2400,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Audio play queue history",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Audio play queue history by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off Audio play queue history",
+        "negInstruction": "turn on Audio play queue history",
+        "posAtlasAction": "CLICK <point>[[883.9, 957.5]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/RICOSCA_47874.jpg"
+        ],
+        "img_filename": "47874.jpg",
+        "bbox": [
+            29.2,
+            194.5,
+            144.4,
+            231.6
+        ],
+        "image_height": 1920,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Following Only",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Following Only by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Following Only",
+        "negInstruction": "turn off Following Only",
+        "posAtlasAction": "CLICK <point>[[86.8, 213.1]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AndroidWorld_42b2f01c-aa3d-4602-90bf-a0e4faa32a70.png"
+        ],
+        "img_filename": "42b2f01c-aa3d-4602-90bf-a0e4faa32a70.png",
+        "bbox": [
+            58.3,
+            714.6,
+            770.4,
+            735.8
+        ],
+        "image_height": 2400,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "mobile data in the background",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off mobile data in the background by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off mobile data in the background",
+        "negInstruction": "turn on mobile data in the background",
+        "posAtlasAction": "CLICK <point>[[414.3, 725.2]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/GUIAct_step_14.png"
+        ],
+        "img_filename": "step_14.png",
+        "bbox": [
+            949.6,
+            3.5,
+            991.9,
+            30.7
+        ],
+        "image_height": 1080,
+        "image_width": 540,
+        "clickCoordinate": [
+            911.0,
+            617.0
+        ],
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Bookmarks",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Bookmarks by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Bookmarks",
+        "negInstruction": "turn off Bookmarks",
+        "posAtlasAction": "CLICK <point>[[970.8, 17.1]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/GUIAct_step_32.png"
+        ],
+        "img_filename": "step_32.png",
+        "bbox": null,
+        "image_height": 732,
+        "image_width": 412,
+        "clickCoordinate": [
+            104.0,
+            55.0
+        ],
+        "useBbox": false,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Additional settings in the app",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Additional settings in the app by changing the switch from Enabled to Disabled"
+        },
+        "rawClickCoordinate": [
+            43,
+            40
+        ],
+        "posInstruction": "turn off Additional settings in the app",
+        "negInstruction": "turn on Additional settings in the app",
+        "posAtlasAction": "CLICK <point>[[104.0, 55.0]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AMEX_Beyond_2024_3_9_0_21-284.png"
+        ],
+        "img_filename": "Beyond_2024_3_9_0_21-284.png",
+        "bbox": [
+            547.0,
+            182.0,
+            992.0,
+            231.0
+        ],
+        "image_height": 2960,
+        "image_width": 1440,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "auto update",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off auto update by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off auto update",
+        "negInstruction": "turn on auto update",
+        "posAtlasAction": "CLICK <point>[[769.5, 206.5]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/GUIAct_step_32.png"
+        ],
+        "img_filename": "step_32.png",
+        "bbox": [
+            792.7,
+            0.5,
+            846.2,
+            35.2
+        ],
+        "image_height": 732,
+        "image_width": 412,
+        "clickCoordinate": [
+            104.0,
+            55.0
+        ],
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Weather Options",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Weather Options by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off Weather Options",
+        "negInstruction": "turn on Weather Options",
+        "posAtlasAction": "CLICK <point>[[819.5, 17.9]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AITW_episode_18414895380820086040_step_13.jpg"
+        ],
+        "img_filename": "episode_18414895380820086040_step_13.jpg",
+        "bbox": [
+            389.5,
+            407.9,
+            489.5,
+            507.9
+        ],
+        "image_height": 732,
+        "image_width": 412,
+        "clickCoordinate": [
+            439.5,
+            457.9
+        ],
+        "useBbox": false,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Notifications",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn off Notifications by changing the switch from Disabled to Enabled"
+        },
+        "rawClickCoordinate": [
+            181,
+            335
+        ],
+        "posInstruction": "turn on Notifications",
+        "negInstruction": "turn off Notifications",
+        "posAtlasAction": "CLICK <point>[[439.5, 457.9]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AMEX_Player_FM_2024_3_4_23_31-79.png"
+        ],
+        "img_filename": "Player_FM_2024_3_4_23_31-79.png",
+        "bbox": [
+            830.7,
+            715.3,
+            955.0,
+            747.7
+        ],
+        "image_height": 3040,
+        "image_width": 1440,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Force offline",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Force offline by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Force offline",
+        "negInstruction": "turn off Force offline",
+        "posAtlasAction": "CLICK <point>[[892.9, 731.5]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AMEX_Beyond_2024_3_9_0_21-284.png"
+        ],
+        "img_filename": "Beyond_2024_3_9_0_21-284.png",
+        "bbox": [
+            504.3,
+            183.1,
+            949.2,
+            227.0
+        ],
+        "image_height": 2960,
+        "image_width": 1440,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "auto update",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off auto update by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off auto update",
+        "negInstruction": "turn on auto update",
+        "posAtlasAction": "CLICK <point>[[726.8, 205.1]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AITW_episode_18419101792332662857_step_11.jpg"
+        ],
+        "img_filename": "episode_18419101792332662857_step_11.jpg",
+        "bbox": [
+            845.0,
+            100.9,
+            945.0,
+            200.9
+        ],
+        "image_height": 1080,
+        "image_width": 540,
+        "clickCoordinate": [
+            895.0,
+            150.9
+        ],
+        "useBbox": false,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Suggested sharing",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Suggested sharing by changing the switch from Enabled to Disabled"
+        },
+        "rawClickCoordinate": [
+            483,
+            163
+        ],
+        "posInstruction": "turn off Suggested sharing",
+        "negInstruction": "turn on Suggested sharing",
+        "posAtlasAction": "CLICK <point>[[895.0, 150.9]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AndroidWorld_3f71c47d-87e2-4073-8aeb-4a8920939431.png"
+        ],
+        "img_filename": "3f71c47d-87e2-4073-8aeb-4a8920939431.png",
+        "bbox": [
+            855.1,
+            288.9,
+            909.3,
+            312.5
+        ],
+        "image_height": 2400,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Auto rescan",
+            "state_before_action": "Enabled",
+            "state_after_action": "Disabled",
+            "action_effect": "The action turn off Auto rescan by changing the switch from Enabled to Disabled"
+        },
+        "posInstruction": "turn off Auto rescan",
+        "negInstruction": "turn on Auto rescan",
+        "posAtlasAction": "CLICK <point>[[882.2, 300.7]]</point>",
+        "negAtlasAction": "COMPLETE"
+    },
+    {
+        "images": [
+            "GUIData/stateControlBenchmark/AndroidWorld_9c35d658-c87c-40fc-91ca-cad85dc1fe0f.png"
+        ],
+        "img_filename": "9c35d658-c87c-40fc-91ca-cad85dc1fe0f.png",
+        "bbox": [
+            771.0,
+            291.2,
+            915.7,
+            326.5
+        ],
+        "image_height": 2400,
+        "image_width": 1080,
+        "useBbox": true,
+        "annotation": {
+            "is_switch": true,
+            "feature": "Battery Saver",
+            "state_before_action": "Disabled",
+            "state_after_action": "Enabled",
+            "action_effect": "The action turn on Battery Saver by changing the switch from Disabled to Enabled"
+        },
+        "posInstruction": "turn on Battery Saver",
+        "negInstruction": "turn off Battery Saver",
+        "posAtlasAction": "CLICK <point>[[843.4, 308.9]]</point>",
+        "negAtlasAction": "COMPLETE"
+    }
+]
