@@ -14,8 +14,9 @@ See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by 
 </div>
 
 ## 🚀 News
+
 - 2025.9.17 We release the preprocess and evaluation code of our paper.
-- - 2025.9.17 We release the video demo of our paper.
+- 2025.9.17 We release the video demo of our paper.
 
 
 ##  Video Demo
