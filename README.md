@@ -1,9 +1,12 @@
 # ⭐ StaR
 <div align="center">
   <h2 align="center">See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by Identifying Toggles</h2>
+  <a href="https://arxiv.org/abs/2509.13615" style="display: inline-block; text-align: center;">
+      <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2509.13615-b31b1b.svg?style=flat">
+  </a>
 </div>
 
-**This repository is the code implementation of our paper**
+**This repository is the code implementation of our [paper](https://arxiv.org/abs/2509.13615)**
 ```
 See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by Identifying Toggles
 ```
@@ -15,6 +18,7 @@ See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by 
 
 ## 🚀 News
 
+- 2025.9.18 We release the state control benchmark in our paper.
 - 2025.9.17 We release the preprocess and evaluation code of our paper.
 - 2025.9.17 We release the video demo of our paper.
 
@@ -49,6 +53,46 @@ Examples are provided in this repository:
 - Benchmark samples: [Examples](./data/state/state_control_benchmark_sample.json)
 - Corresponding screenshots: [ImagePaths](./GUIData/stateControlBenchmark)
 
+An example record and the corresponding description of the state control benchmark are presented as below:
+
+```json
+{
+    "images": [
+        "GUIData/stateControlBenchmark/AITW_episode_8680156250447271550_step_10.jpg"
+    ], # Corresponding GUI screenshot path
+    "img_filename": "episode_8680156250447271550_step_10.jpg", # Corresponding GUI screenshot filename 
+    "bbox": [
+        814.4,
+        360.5,
+        914.4,
+        460.5
+    ], # Bounding box of the target element, normalized to [0, 1000]
+    "image_height": 732,
+    "image_width": 412,
+    "clickCoordinate": [
+        864.4,
+        410.5
+    ], # Click coordinate of the target element, normalized to [0, 1000]
+    "useBbox": false, # Whether to use bounding box to locate the target element
+    "annotation": {
+        "is_switch": true, # Whether the target element is a toggle switch
+        "feature": "picture-in-picture", # The feature of the target element
+        "state_before_action": "Enabled", # The state of the target element before the click action
+        "state_after_action": "Disabled", # The state of the target element after the click action
+        "action_effect": "The action turn off picture-in-picture by changing the switch from Enabled to Disabled" 
+    },
+    "rawClickCoordinate": [
+        356,
+        300
+    ], # Raw click coordinate of the target element
+    "posInstruction": "turn off picture-in-picture", # Positive instruction to vary the toggle state
+    "negInstruction": "turn on picture-in-picture", # Negative instruction to maintain the toggle state
+    "posAtlasAction": "CLICK <point>[[864.4, 410.5]]</point>", # Positive label action in OS-Atlas format
+    "negAtlasAction": "COMPLETE" # Negative label action in OS-Atlas format
+}
+```
+
+The full benchmark is available on [huggingface](https://huggingface.co/datasets/ZrW00/StaR_state_control_benchmark).
 
 
 ## Data Preprocessing
@@ -146,4 +190,18 @@ This work can not be done without the help of the following repos:
 
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
 - [AndroidWorld](https://github.com/google-research/android_world)
+
+
+## Citation
+If you find this work useful, please consider citing:
+```
+@article{wu2025see,
+	title={See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by Identifying Toggles}, 
+	author={Zongru Wu and Rui Mao and Zhiyuan Tian and Pengzhou Cheng and Tianjie Ju and Zheng Wu and Lingzhong Dong and Haiyue Sheng and Zhuosheng Zhang and Gongshen Liu},
+	year={2025},
+	journal={arXiv preprint arXiv:2509.13615},
+	url={https://arxiv.org/abs/2509.13615}, 
+}
+```
+
     
