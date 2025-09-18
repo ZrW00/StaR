@@ -1,9 +1,19 @@
 # ⭐ StaR
+
+<div>
+ <h2 align="center">See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by Identifying Toggles</h2>
+</div>
+</div>
+
+<div>
+<br>
+
 <div align="center">
-  <h2 align="center">See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by Identifying Toggles</h2>
-  <a href="https://arxiv.org/abs/2509.13615" style="display: inline-block; text-align: center;">
-      <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2509.13615-b31b1b.svg?style=flat">
-  </a>
+
+[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/ZrW00/StaR_state_control_benchmark)
+[![Github](https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ZrW00/StaR)
+[![arXiv](https://img.shields.io/badge/arXiv-2509.13615-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2509.13615)
+</div>
 </div>
 
 **This repository is the code implementation of our [paper](https://arxiv.org/abs/2509.13615)**
@@ -18,7 +28,7 @@ See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by 
 
 ## 🚀 News
 
-- 2025.9.18 We release the state control benchmark in our paper.
+- 2025.9.18 We release the [state control benchmark](https://huggingface.co/datasets/ZrW00/StaR_state_control_benchmark) in our paper.
 - 2025.9.17 We release the preprocess and evaluation code of our paper.
 - 2025.9.17 We release the video demo of our paper.
 
