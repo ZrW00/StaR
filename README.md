@@ -53,44 +53,66 @@ Examples are provided in this repository:
 - Benchmark samples: [Examples](./data/state/state_control_benchmark_sample.json)
 - Corresponding screenshots: [ImagePaths](./GUIData/stateControlBenchmark)
 
-An example record and the corresponding description of the state control benchmark are presented as below:
+An example record of the state control benchmark are presented as below:
 
 ```json
 {
     "images": [
         "GUIData/stateControlBenchmark/AITW_episode_8680156250447271550_step_10.jpg"
-    ], # Corresponding GUI screenshot path
-    "img_filename": "episode_8680156250447271550_step_10.jpg", # Corresponding GUI screenshot filename 
+    ], 
+    "img_filename": "episode_8680156250447271550_step_10.jpg", 
     "bbox": [
         814.4,
         360.5,
         914.4,
         460.5
-    ], # Bounding box of the target element, normalized to [0, 1000]
+    ], 
     "image_height": 732,
     "image_width": 412,
     "clickCoordinate": [
         864.4,
         410.5
-    ], # Click coordinate of the target element, normalized to [0, 1000]
-    "useBbox": false, # Whether to use bounding box to locate the target element
+    ], 
+    "useBbox": false, 
     "annotation": {
-        "is_switch": true, # Whether the target element is a toggle switch
-        "feature": "picture-in-picture", # The feature of the target element
-        "state_before_action": "Enabled", # The state of the target element before the click action
-        "state_after_action": "Disabled", # The state of the target element after the click action
+        "is_switch": true, 
+        "feature": "picture-in-picture", 
+        "state_before_action": "Enabled", 
+        "state_after_action": "Disabled",
         "action_effect": "The action turn off picture-in-picture by changing the switch from Enabled to Disabled" 
     },
     "rawClickCoordinate": [
         356,
         300
-    ], # Raw click coordinate of the target element
-    "posInstruction": "turn off picture-in-picture", # Positive instruction to vary the toggle state
-    "negInstruction": "turn on picture-in-picture", # Negative instruction to maintain the toggle state
-    "posAtlasAction": "CLICK <point>[[864.4, 410.5]]</point>", # Positive label action in OS-Atlas format
-    "negAtlasAction": "COMPLETE" # Negative label action in OS-Atlas format
+    ], 
+    "posInstruction": "turn off picture-in-picture", 
+    "negInstruction": "turn on picture-in-picture", 
+    "posAtlasAction": "CLICK <point>[[864.4, 410.5]]</point>", 
+    "negAtlasAction": "COMPLETE"
 }
 ```
+The description of each field in the state control benchmark is presented below:
+
+| Field Name                   | Description                                                               |
+|-----------------------------|----------------------------------------------------------------------------|
+| `images`                    | Corresponding GUI screenshot path                                          |
+| `img_filename`              | Corresponding GUI screenshot filename, not used                            |
+| `bbox`                      | Bounding box of the target element, normalized to `[0, 1000]`              |
+| `image_height`, `image_width` | Height and width of the original screenshot (in pixels)                  |
+| `clickCoordinate`           | Normalized click coordinate of the target element, normalized to `[0, 1000]`       |
+| `useBbox`                   | Whether to use the bounding box to locate the target element (boolean)     |
+| `annotation`                | Annotations related to the target element interaction                      |
+| └── `is_switch`             | Whether the target element is a toggle switch                              |
+| └── `feature`               | Feature name controlled by the toggle (e.g., picture-in-picture)           |
+| └── `state_before_action`   | State of the toggle before the click (e.g., Enabled)                       |
+| └── `state_after_action`    | State of the toggle after the click (e.g., Disabled)                       |
+| └── `action_effect`         | Description of the effect caused by the action (natural language)          |
+| `rawClickCoordinate`        | Raw click coordinate (in pixels, not normalized)                           |
+| `posInstruction`            | Positive instruction — vary the toggle state                               |
+| `negInstruction`            | Negative instruction — maintains the current state                         |
+| `posAtlasAction`            | Positive label action (OS-Atlas format)                                    |
+| `negAtlasAction`            | Negative label action (OS-Atlas format)                                    |
+
 
 The full benchmark is available on [huggingface](https://huggingface.co/datasets/ZrW00/StaR_state_control_benchmark).
 
