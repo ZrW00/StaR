@@ -14,18 +14,7 @@ from qwen_vl_utils import process_vision_info
 from absl import logging # Betula added here
 import time
 
-# import logging
 
-# logging.basicConfig(
-#     level=logging.INFO,
-#     format="%(asctime)s [%(process)d] [%(levelname)s] %(filename)s:%(lineno)d - %(message)s",
-#     handlers=[
-#         logging.StreamHandler(),  # 输出到控制台
-#         logging.FileHandler("annotate.log", mode='a', encoding='utf-8')  # 输出到文件
-#     ]
-# )
-
-# logger = logging.getLogger(__name__)
 
 
 UITARS_ONLINE_SYS_PROMPT = """
@@ -57,10 +46,10 @@ finished() # Submit the task regardless of whether it succeeds or fails.
 """
 
 
-# Betula added: match app name roughly
+
 def _match_app_correctly(agent_output: str) -> str:
     normalized_input = re.sub(r"[^a-zA-Z\s]", "", agent_output.lower())
-    # generate 3-len substrings for matching
+
     letter_sequences = re.findall(r"[a-zA-Z]{3,}", normalized_input)
     if not letter_sequences:
         return ""
@@ -171,7 +160,6 @@ def convert_uitars_action_to_json_action(
   
   
 def extractUITARSPrediction(text:str):
-    # text example:  "Thought: Click the button\nAction: click(start_box='(100,200)')"
     if text.startswith("Thought:"):
         thought_pattern = r"Thought: (.+?)(?=\s*Action: |$)"
         thought_hint = "Thought: "
@@ -252,7 +240,6 @@ class UITARS(base_agent.EnvironmentInteractingAgent):
         
     def create_action_generation_messages_payload(self, action_gen_prompt, image_array):
         base64_image = infer.Gpt4Wrapper.encode_image(image_array)
-        # Betula changed: for correct format
         messages = [
             {
                 "role": "system",
@@ -286,12 +273,6 @@ class UITARS(base_agent.EnvironmentInteractingAgent):
         context = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         
         image_inputs, video_inputs = process_vision_info(messages)
-
-        # Betula added here: Save images for debug
-        # if image_inputs is not None:
-        #     for i, img in enumerate(image_inputs):
-        #         if hasattr(img, 'save'):  # Check if it's a PIL Image
-        #             img.save(f"/data2/home/tianzhiyuan/Codes/tmp/image_{i}.png")
 
         inputs = self.processor(
             text=[context],

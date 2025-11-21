@@ -17,8 +17,8 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(process)d] [%(levelname)s] %(filename)s:%(lineno)d - %(message)s",
     handlers=[
-        logging.StreamHandler(),  # 输出到控制台
-        logging.FileHandler("annotate.log", mode='a', encoding='utf-8')  # 输出到文件
+        logging.StreamHandler(),  
+        logging.FileHandler("annotate.log", mode='a', encoding='utf-8')  
     ]
 )
 
@@ -216,7 +216,7 @@ class GLM4VFlashAgent:
         max_new_tokens=512,
         benchmarkSetting = "high"
     ):
-        apiKey = "30adcfd54712c617f290fe9beb513029.RRktJf0dcgvk53GO"
+        apiKey = "Your Key"
         self.model = ZhipuAI(api_key=apiKey)
         if path is None:
             path = "glm-4v-flash"
@@ -307,12 +307,8 @@ class AgentCPMGUIAgent(Agent):
         return img
 
     def generate(self, messages):
-        # instruction = messages["messages"][1]["content"]
-        instruction = messages[1]["content"] # aitz等
-        # instruction = messages[0]["content"] # state_cot
-        # image = messages["images"][0] # PIL.Image 格式
-        image = messages[2]["content"][0]["image"] # PIL.Image 格式 aitz等
-        # image = messages[1]["content"][0]["image"] # PIL.Image 格式 state_cot等
+        instruction = messages[1]["content"] 
+        image = messages[2]["content"][0]["image"] 
         image = self._load_image_if_needed(image)
         image = self._resize_image(image)
 
@@ -324,7 +320,6 @@ class AgentCPMGUIAgent(Agent):
                 image
             ]
         }]
-        # 模型 chat 接口
         outputs = self.model.chat(
             image=None,
             msgs=message,
@@ -335,9 +330,9 @@ class AgentCPMGUIAgent(Agent):
             n=1,
         )
         if isinstance(outputs, list):
-            outputs = outputs[0]  # 取第一个字符串
+            outputs = outputs[0]  
         if isinstance(outputs, str):
-            outputs = json.loads(outputs)  # 转换成 dict
+            outputs = json.loads(outputs)  
         return outputs
     
 
@@ -350,8 +345,8 @@ class APIAgentForState:
         benchmarkSetting="high"
     ):
         self.modelPath = path
-        self.apiKey = "sk-lk2OlVIyEsuaJi0VvPw0mDf8bQt9LGy9siillORONrKnN9Od"
-        self.apiUrl = "https://xinyun.ai/v1/chat/completions"
+        self.apiKey = "Your Key"
+        self.apiUrl = "Your API URL"
         
         assert benchmarkSetting in ["high", "low"], "benchmarkSetting must be either 'high' or 'low'"
         self.benchmarkSetting = benchmarkSetting
@@ -392,17 +387,15 @@ class APIAgentForState:
         }
     
         try:
-        # 发送 POST 请求
             response = requests.post(self.apiUrl, headers=headers, json=data)
             
             if response.status_code == 200:
-                # 解析响应并提取 Gemini 的回复
                 result = response.json()
                 return [result["choices"][0]["message"]["content"].strip()]
             else:
-                return [f"请求失败，状态码: {response.status_code}, 错误信息: {response.text}"]
+                return [f"Failed Code: {response.status_code}, Info: {response.text}"]
         except Exception as e:
-            return [f"请求出错: {str(e)}"]
+            return [f"Failed: {str(e)}"]
 
 class GUIR1Agent(Agent):
     def __init__(

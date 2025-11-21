@@ -112,10 +112,8 @@ class ParseActionError(ValueError):
     pass
 
 
-# Betula added: match app name roughly
 def _match_app_correctly(agent_output: str) -> str:
     normalized_input = re.sub(r"[^a-zA-Z\s]", "", agent_output.lower())
-    # generate 3-len substrings for matching
     letter_sequences = re.findall(r"[a-zA-Z]{3,}", normalized_input)
     if not letter_sequences:
         return ""
@@ -173,13 +171,13 @@ def convert_uitars_action_to_json_action(
     elif action.startswith("press_back"):
         action_type = (
             json_action.NAVIGATE_BACK
-        )  # Betula edited here, not PRESS_* but NAVIGATE_*
+        )  
     elif action.startswith("press_home"):
         action_type = (
             json_action.NAVIGATE_HOME
-        )  # Betula edited here, not PRESS_* but NAVIGATE_*
+        )  
     elif action.startswith("scroll"):
-        # attention to the directions
+        
         pattern = r"scroll\(direction=\\'([a-zA-Z]+)\\'\)"
         match = re.search(pattern, action)
         if match:
@@ -196,7 +194,7 @@ def convert_uitars_action_to_json_action(
         match = re.search(pattern, action)
         if match:
             app_name = match.group(1)
-            # Betula edited here: to match app correctly
+            
             app_name = app_name.replace("The", "")
             app_name = app_name.replace("Simple", "")
             app_name = app_name.replace("Pro", "")
@@ -235,15 +233,6 @@ def convert_uitars_action_to_json_action(
 
 
 def translateACG2Atlas(action: Union[Dict, List[Dict]]) -> str:
-    """
-    "{\"thought\": \"Open the Cx file Explorer and rename the Flowers folder to Flora.\", \"POINT\": [951, 256]}"
-    "{\"thought\": \"Share my favorite Book \\\"the Queen's Gambit\\\" to my Friend Natalie larson over her gmail address -natalie.larson1998@gmail.com from the  PocketBook app.\", \"POINT\": [108, 272], \"duration\": 1000}"
-    "{\"thought\": \"Show me some of the sustainability art pieces on the Pinterest app for my research on sustainable energy.\", \"duration\": 500}"
-    "{\"thought\": \"In Google News listen the \\\"Kevin Cahoon:Let's Get Shucked! \\\" podcast on Broadway Podcast Network\", \"POINT\": [500, 500], \"to\": \"down\"}"
-    "{\"thought\": \"Open the Cx file Explorer and rename the Flowers folder to Flora.\", \"TYPE\": \"Flora\"}"
-    "{\"thought\": \"Turn on device location & give the location access to google app\", \"PRESS\": \"BACK\"}"
-    "{\"thought\": \"Open the Cx file Explorer and rename the Flowers folder to Flora.\", \"STATUS\": \"finish\"}"
-    """
     if isinstance(action, dict):
         act = action
     elif isinstance(action, list):
@@ -298,18 +287,6 @@ def translateACG2Atlas(action: Union[Dict, List[Dict]]) -> str:
 
 
 def translateAtlas2Uitars(action: str):
-    """
-    click(start_box=\'<|box_start|>(x1,y1)<|box_end|>\')
-    long_press(start_box=\'<|box_start|>(x1,y1)<|box_end|>\', time=\'\')
-    type(content=\'\')
-    scroll(direction=\'down or up or right or left\')
-    enter()
-    open_app(app_name=\'\')
-    press_back()
-    press_home()
-    wait()
-    finished()
-    """
     if action.startswith("CLICK"):
         pattern = r"\[\[(-?[0-9.]+),\s*(-?[0-9.]+)\]\]"
         match = re.search(pattern, action)
@@ -374,8 +351,7 @@ class CPM(base_agent.EnvironmentInteractingAgent):
     def __init__(self, env: interface.AsyncEnv, name: str = "CPM", modelPath=None):
         super().__init__(env, name)
         self._actions = []
-        # self._history = []
-
+        
         self.additional_guidelines = None
         self.modelPath = modelPath
         self.cache_dir = "~/.cache"
@@ -409,9 +385,7 @@ class CPM(base_agent.EnvironmentInteractingAgent):
                 trust_remote_code=True,
                 torch_dtype=torch.bfloat16,
             )
-        # self.processor: Qwen2VLProcessor = AutoProcessor.from_pretrained(
-        #     self.modelPath, use_fast=False
-        # )
+        
 
         with torch.no_grad():
             for name, param in self.model.named_parameters():

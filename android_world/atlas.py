@@ -16,7 +16,7 @@ from transformers import (
 )
 import torch
 from qwen_vl_utils import process_vision_info
-from android_world.env.adb_utils import _PATTERN_TO_ACTIVITY  # Betula added here
+from android_world.env.adb_utils import _PATTERN_TO_ACTIVITY  
 
 import logging
 
@@ -24,8 +24,8 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(process)d] [%(levelname)s] %(filename)s:%(lineno)d - %(message)s",
     handlers=[
-        logging.StreamHandler(),  # 输出到控制台
-        logging.FileHandler("annotate.log", mode="a", encoding="utf-8"),  # 输出到文件
+        logging.StreamHandler(),  
+        logging.FileHandler("annotate.log", mode="a", encoding="utf-8"),  
     ],
 )
 
@@ -106,10 +106,9 @@ Screenshot: <image>
 """
 
 
-# Betula added: match app name roughly
+
 def _match_app_correctly(agent_output: str) -> str:
     normalized_input = re.sub(r"[^a-zA-Z\s]", "", agent_output.lower())
-    # generate 3-len substrings for matching
     letter_sequences = re.findall(r"[a-zA-Z]{3,}", normalized_input)
     if not letter_sequences:
         return ""
@@ -134,17 +133,6 @@ class ParseActionError(ValueError):
 def convert_atlas_action_to_json_action(
     action: str, width, height
 ) -> json_action.JSONAction:
-    """Converts a Atlas object to a JSONAction object.
-
-    Args:
-        action: The Atlas object to convert.
-
-    Returns:
-        The corresponding JSONAction object.
-
-    Raises:
-        ParseActionError: If cannot convert action.
-    """
     text = None
     direction = None
     goal_status = None
@@ -173,7 +161,6 @@ def convert_atlas_action_to_json_action(
     elif action.startswith("PRESS_HOME"):
         action_type = json_action.NAVIGATE_HOME
     elif action.startswith("SCROLL"):
-        # attention to the directions
         pattern = r"SCROLL ([a-zA-Z]+)"
         match = re.search(pattern, action)
         if match:
@@ -190,7 +177,6 @@ def convert_atlas_action_to_json_action(
         match = re.search(pattern, action)
         if match:
             app_name = match.group(1)
-            # Betula edited here: to match app correctly
             app_name = app_name.replace("The", "")
             app_name = app_name.replace("Simple", "")
             app_name = app_name.replace("Pro", "")
@@ -229,7 +215,6 @@ def convert_atlas_action_to_json_action(
 
 
 def extractAtlasPrediction(text: str):
-    # text example:  "Thought: Click the button\nAction: click(start_box='(100,200)')"
     if text.startswith("Thought:"):
         thought_pattern = r"Thought: (.+?)(?=\s*Action: |$)"
         thought_hint = "Thought: "
@@ -345,12 +330,7 @@ class Atlas(base_agent.EnvironmentInteractingAgent):
 
         image_inputs, video_inputs = process_vision_info(messages)
 
-        # Betula added here: Save images for debug
-        # if image_inputs is not None:
-        #     for i, img in enumerate(image_inputs):
-        #         if hasattr(img, "save"):  # Check if it's a PIL Image
-        #             img.save(f"/data2/home/tianzhiyuan/Codes/tmp/atlas/image_{i}.png")
-
+       
         inputs = self.processor(
             text=[context],
             images=image_inputs,
@@ -375,30 +355,6 @@ class Atlas(base_agent.EnvironmentInteractingAgent):
         return outputText[0]
 
     def updateHistory(self, image_array, atlas_action, atlas_thought):
-        # imagePixel = copy.deepcopy(image_array)
-        # base64_image = infer.Gpt4Wrapper.encode_image(imagePixel )
-        # self._history.extend([
-        #     {
-        #         "role": "user",
-        #         "content": {
-        #             "type": "image_url",
-        #             # "image_url": {
-        #             #     "url": f"data:image/jpeg;base64,{base64_image}",
-        #             #     "detail": "high",
-        #             # }
-        #             "image_url": f"data:image/jpeg;base64,{base64_image}",
-        #         }
-        #     },
-        #     {
-        #         "role": "assistant",
-        #         "content": [
-        #             {
-        #                 "type": "text",
-        #                 "text": f"Thought: {uitars_thought}\nAction: {uitars_action}"
-        #             }
-        #         ]
-        #     }
-        # ])
 
         self._history.append(atlas_thought)
 
