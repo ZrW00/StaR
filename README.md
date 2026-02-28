@@ -28,6 +28,7 @@ See, Think, Act: Teaching Multimodal Agents to Effectively Interact with GUI by 
 
 ## 🚀 News
 
+- 2026.2.23 Our paper is accepted by **CVPR 2026**. 
 - 2025.9.18 We release the [state control benchmark](https://huggingface.co/datasets/ZrW00/StaR_state_control_benchmark) in our paper.
 - 2025.9.17 We release the preprocess and evaluation code of our paper.
 - 2025.9.17 We release the video demo of our paper.
